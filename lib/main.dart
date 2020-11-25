@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_example/Firebase/firebase_messasing/firebase_messages.dart';
+import 'package:flutter_widget_example/local_notification/localnotification.dart';
 import 'package:flutter_widget_example/map/custommarkerimage.dart';
+import 'package:flutter_widget_example/map/drawing_route_line.dart';
 import 'package:flutter_widget_example/map/googlemap.dart';
 import 'package:flutter_widget_example/myNodeTest/ui/AuthScreen.dart';
 import 'package:flutter_widget_example/provider/Item.dart';
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginSignUpScreen(),
+      home: LocalNotification(),
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme:

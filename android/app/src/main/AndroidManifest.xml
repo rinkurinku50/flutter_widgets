@@ -7,7 +7,12 @@
          FlutterApplication and put your custom class here. -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uses-permission android:name="android.permission.CAMERA"/>
     <application
         android:name="io.flutter.app.FlutterApplication"
@@ -46,7 +51,9 @@
              <intent-filter>
                 <action android:name="FLUTTER_NOTIFICATION_CLICK" />
                 <category android:name="android.intent.category.DEFAULT" />
-             </intent-filter>  
+             </intent-filter>
+
+
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
@@ -55,7 +62,14 @@
             android:value="2" />
 
  <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyCXBBSsCPqYAQyG9lSB17eoTiYMKkRMQ84"/>
+               android:value="AIzaSyDW48aP23Ql8upkfet4J9uFeY3_QPkuGxQ"/>
+
+        <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
 
     </application>
 </manifest>
