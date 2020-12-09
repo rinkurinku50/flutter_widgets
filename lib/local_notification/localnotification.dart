@@ -30,41 +30,42 @@ class _LocalNotificationState extends State<LocalNotification> {
         title: Text('LocalNotification'),
       ),
       body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            RaisedButton(
-              onPressed: showNotification,
-              child: new Text(
-                'showNotification',
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RaisedButton(
+                onPressed: showNotification,
+                child: new Text(
+                  'showNotification',
+                ),
               ),
-            ),
-            RaisedButton(
-              onPressed: cancelNotification,
-              child: new Text(
-                'cancelNotification',
+              RaisedButton(
+                onPressed: cancelNotification,
+                child: new Text(
+                  'cancelNotification',
+                ),
               ),
-            ),
-            RaisedButton(
-              onPressed: scheduleNotification,
-              child: new Text(
-                'scheduleNotification',
+              RaisedButton(
+                onPressed: scheduleNotification,
+                child: new Text(
+                  'scheduleNotification',
+                ),
               ),
-            ),
-            RaisedButton(
-              onPressed: showBigPictureNotification,
-              child: new Text(
-                'showBigPictureNotification',
+              RaisedButton(
+                onPressed: showBigPictureNotification,
+                child: new Text(
+                  'showBigPictureNotification',
+                ),
               ),
-            ),
-            RaisedButton(
-              onPressed: showNotificationMediaStyle,
-              child: new Text(
-                'showNotificationMediaStyle',
+              RaisedButton(
+                onPressed: showNotificationMediaStyle,
+                child: new Text(
+                  'showNotificationMediaStyle',
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         )
       ),
     );

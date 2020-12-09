@@ -26,7 +26,9 @@ class _FirebaseMessDemoState extends State<FirebaseMessDemo> {
   }
 
   _firebaselistenerConfig() {
+
     _firebaseMessaging.configure(
+      // onBackgroundMessage: onBackData,
       onMessage: (message) async {
         print('onMessage: $message');
         _getMessages(message);
@@ -40,6 +42,10 @@ class _FirebaseMessDemoState extends State<FirebaseMessDemo> {
         _getMessages(message);
       },
     );
+  }
+
+  Future<Map<String,dynamic>> onBackData() async {
+
   }
 
   _getMessages(Map<String, dynamic> message) {
