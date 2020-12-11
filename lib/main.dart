@@ -10,6 +10,7 @@ import 'package:flutter_widget_example/map/custommarkerimage.dart';
 import 'package:flutter_widget_example/map/drawing_route_line.dart';
 import 'package:flutter_widget_example/map/googlemap.dart';
 import 'package:flutter_widget_example/myNodeTest/ui/AuthScreen.dart';
+import 'package:flutter_widget_example/pathprovider/GetImage.dart';
 import 'package:flutter_widget_example/provider/Item.dart';
 import 'package:flutter_widget_example/provider/ItemAddNotifier.dart';
 import 'package:flutter_widget_example/provider/ShopNameNotifier.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FilePickerWidget(),
+      home: GetAllImage(),
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme:
